@@ -15,3 +15,22 @@ def test_give_list_files(extension='xlsx'):
     for file in give_list_files(path):
         assert file.endswith(extension)
 
+def test_name_sheet(names_files,correct_name_files):
+    """
+    GIVEN(Дано) Список с именами файлов
+    WHEN(Когда) Используем функцию name_sheet
+    THEN(Тогда) Должны получить корректные именя для листов книги, корректно обработать имена файлов без расширений
+    :param names_files: список с именами файлов
+    """
+    lst_test = []
+    for name_file in names_files:
+        # print(name_file)
+        n = name_sheet(name_file)
+        lst_test.append(n)
+
+
+    assert lst_test == correct_name_files
+
+
+
+
