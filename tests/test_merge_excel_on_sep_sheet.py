@@ -25,7 +25,7 @@ def test_name_sheet(names_files,correct_name_files):
     lst_test = []
     for name_file in names_files:
         # print(name_file)
-        n = name_sheet(name_file)
+        n = create_name_sheet(name_file)
         lst_test.append(n)
 
 
